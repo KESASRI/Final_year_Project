@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="container">
+  <div class="top-row">
+    <h2>User Dashboard</h2>
+    <button type="button" id="logoutBtn" class="small-btn">Logout</button>
+  </div>
+
+  <p id="userInfo" class="muted"></p>
+  <p id="keyStatus" class="muted"></p>
+
+  <select id="files">
+    <option value="">-- Select File --</option>
+  </select>
+  <button id="requestBtn">Request File</button>
+
+  <textarea id="encryptedKey" placeholder="Paste Wrapped AES Key from Email"></textarea>
+  <input type="password" id="keyPassword" placeholder="Enter your private-key password">
+  <button id="decryptBtn">Decrypt & Download</button>
+
+  <p id="msg"></p>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/cryptoKeys.js"></script>
+<script src="js/user.js"></script>

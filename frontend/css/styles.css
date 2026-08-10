@@ -1,0 +1,247 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* ===== MAIN CARD ===== */
+.container {
+  background: #ffffff;
+  width: 470px;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1d2671;
+}
+
+.hidden {
+  display: none;
+}
+
+.muted {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 14px;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-row h2 {
+  margin: 0;
+}
+
+.small-btn {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tab-buttons button {
+  margin-top: 0;
+}
+
+.inline-group {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.request-text {
+  flex: 1;
+}
+
+.status-green {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.status-red {
+  color: #b00020;
+  font-weight: 700;
+}
+
+.status-yellow {
+  color: #9a6700;
+  font-weight: 700;
+}
+
+.admin-container {
+  width: min(980px, 94vw);
+  min-height: 75vh;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 28px;
+}
+
+.admin-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.admin-header .small-btn {
+  margin-top: 8px;
+}
+
+.requests-panel {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  margin-top: 12px;
+  padding-right: 8px;
+}
+
+.requests-panel ul {
+  margin-top: 0;
+}
+
+/* ===== INPUTS ===== */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1d2671;
+  box-shadow: 0 0 5px rgba(29, 38, 113, 0.4);
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== MESSAGE TEXT ===== */
+#msg {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* ===== HOME PAGE BUTTONS ===== */
+.role-buttons button {
+  margin-bottom: 12px;
+}
+
+/* ===== ADMIN LIST ===== */
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+ul li {
+  background: #f5f5f5;
+  padding: 22px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+ul li button {
+  width: auto;
+  padding: 9px 14px;
+  font-size: 14px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  .admin-container {
+    width: 95%;
+    max-height: 92vh;
+    min-height: 82vh;
+    padding: 18px;
+  }
+
+  .button-row {
+    flex-wrap: wrap;
+  }
+}
